@@ -1,7 +1,8 @@
 {
-  "product": [
+  "products": [
     {
-      "id": 10000,
+      "product_id": 10000,
+      "barCode": 0,
       "category": 0,
       "tags": [""],
       "prodName": "",
@@ -11,20 +12,29 @@
       "images": ["/assets/product/1000-01.jpg"]
     }
   ],
-  "customer": [
+  "customers": [
     {
-      "id": 1000,
-      "nombre": "",
-      "apellido": "",
-      "telefono": "",
+      "customer_id": 1,
+      "name": "",
+      "lastName": "",
+      "phoneNumber": 0,
       "email": "",
-      "direccion": "",
-      "ciudad": "",
-      "provincia": 0,
-      "codPostal": 0,
-      "iva": 0,
       "cuit": 0,
-      "empresa": ""
+      "iva": 0,
+      "organization": "",
+      "address": 0
+    }
+  ],
+  "customerAddresses": [
+    {
+      "address_id": 1,
+      "customer_id": 1,
+      "streetAddress": "",
+      "numberAddress": 0,
+      "zipPostaCode": 0,
+      "city": 0,
+      "stateProvince": 0,
+      "country": 0
     }
   ],
   "seller": [
@@ -34,8 +44,8 @@
       "apellido": ""
     }
   ],
-  "prodCategory": [{ "id": 0, "name": "" }],
-  "customerIva": [
+  "product_category": [{ "id": 0, "name": "" }],
+  "customer_IVA": [
     { "id": 0, "name": "" },
     { "id": 1, "name": "Consumidor Final" },
     { "id": 2, "name": "IVA Responsable Inscripto" },
@@ -49,7 +59,7 @@
     { "id": 10, "name": "IVA No Alcanzado" },
     { "id": 11, "name": "Monotributista Trabajador Independiente" }
   ],
-  "customerProvincia": [
+  "customer_states": [
     { "id": 0, "name": "" },
     { "id": 1, "name": "Córdoba" },
     { "id": 2, "name": "Buenos Aires" },
