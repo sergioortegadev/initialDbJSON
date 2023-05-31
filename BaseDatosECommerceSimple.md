@@ -89,9 +89,13 @@
 1. store_id [stores] : INT **[FK]**
 1. seller_id [sellers] : INT **[FK]**
 1. customer_id [customers] : INT **[FK]**
-1. product_quantity : FLOAT (Debería ser un array FLOAT)
-1. product_id [products] : INT (Debería ser un array de INT) **[FK]**
-1. product_price [products] : FLOAT (Debería ser un array de FLOAT) **[FK]**
+1. items : JSON {
+
+- product_quantity : FLOAT
+- product_id [products] : INT **[FK]**
+- product_price [products] : FLOAT **[FK]**
+  }
+
 1. total : FLOAT
 1. payment_method_id [payments_methods] : INT **[FK]**
 1. delivered : BOOLEAN
@@ -101,6 +105,7 @@
 
 1. seller_id : INT AUTO **[PK]**
 1. seller_name : VARCHAR(100)
+1. seller_last_name : VARCHAR(100)
 1. sellers_area_id [sellers_areas] : INT **[FK]**
 
 ## 11 sellers_areas **[CE]**
@@ -156,12 +161,22 @@
 
 ---
 
+### Diagrama
+
+## Modelo Relacional de la Base de Datos
+
+![Modelo Relacional de la Base de Datos](./InitialDB_MRDB.png)
+
+---
+
 ## Reglas de Negocio
 
-## products
+#### _Las operaciones CRUD_ por cada Entidad
 
-1. Crear el registro de un producto
-1. Leer el registro de un producto dada una condición en particular
-1. Leer todos los registros de la entidad productos
-1. Modificar los datos de un producto dada una condición en particular.
-1. Eliminar el registro de un producto dada una condición en particular
+## products, products_categories, customers, customers_addresses, customer_tax, addresses_cities, addresses_states, addresses_countries, sales, sellers, sellers_areas, payments_methods, stores, stores_addresses
+
+1. Crear el registro.
+1. Leer el registro, dada una condición en particular.
+1. Leer todos los registros.
+1. Modificar los datos dada una condición en particular.
+1. Eliminar el registro dada una condición en particular
